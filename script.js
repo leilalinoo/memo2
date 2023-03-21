@@ -29,6 +29,7 @@ $(function () {
   /**1 .tedd ki a képeket a felső sectionbe
    * minden kép külön div-be kerüljön
    */
+  listaKeverese(LIST);
   const FELSOELEM = $("#felso");
   let tartalom = osszeAllit();
   FELSOELEM.append(tartalom);
@@ -80,4 +81,8 @@ function osszeAllit() {
   }
   console.log(txt);
   return txt;
+}
+
+function listaKeverese(lista) {
+  lista.sort(() => Math.random() - 0.5);
 }
